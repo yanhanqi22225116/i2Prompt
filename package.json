@@ -1,0 +1,19 @@
+{
+  "name": "i2prompt",
+  "version": "0.1.1",
+  "description": "Image-to-prompt browser extension and userscript.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "keywords": [
+    "browser-extension",
+    "edge-extension",
+    "chrome-extension",
+    "tampermonkey",
+    "image-to-prompt",
+    "multimodal"
+  ]
+}

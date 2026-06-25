@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>i2Prompt</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header>
+      <div>
+        <div class="brand">i2Prompt</div>
+        <p id="activeInfo">读取配置中...</p>
+      </div>
+      <button id="btnOptions" title="设置">设置</button>
+    </header>
+
+    <section id="resultPanel" class="result hidden">
+      <div class="result-head">
+        <span id="resultMeta"></span>
+        <div class="result-actions">
+          <button id="btnCopy">复制当前</button>
+          <button id="btnCopyAll">复制全部</button>
+        </div>
+      </div>
+      <nav class="result-tabs">
+        <button id="tabText" class="active" type="button">文字</button>
+        <button id="tabJson" type="button">JSON</button>
+      </nav>
+      <pre id="resultText"></pre>
+    </section>
+
+    <section class="history-head">
+      <span>历史记录</span>
+      <button id="btnClear">清空</button>
+    </section>
+    <label class="search">
+      <input id="searchInput" type="search" placeholder="搜索生成描述">
+    </label>
+    <section id="historyList" class="history"></section>
+  </main>
+
+  <script src="../shared/i2prompt-shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

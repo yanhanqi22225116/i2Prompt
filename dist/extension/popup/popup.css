@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  min-height: 440px;
+  margin: 0;
+  background: #f4f7f7;
+  color: #101820;
+  font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  transition: transform .14s ease, border-color .14s ease, color .14s ease, background .14s ease, box-shadow .14s ease;
+}
+
+.popup {
+  padding: 12px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 15px;
+  background: #101820;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 850;
+}
+
+header p {
+  max-width: 250px;
+  margin: 2px 0 0;
+  color: #a7b5c5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+header button,
+.result-head button,
+.history-head button {
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+button:hover {
+  border-color: #16a085;
+  color: #0f766e;
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+button.done {
+  border-color: #16a085 !important;
+  background: #def7ec !important;
+  color: #047857 !important;
+}
+
+.result {
+  margin-top: 12px;
+  border: 1px solid #d9e0e7;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.result.hidden {
+  display: none;
+}
+
+.result-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid #d9e0e7;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.result-actions {
+  display: inline-flex;
+  gap: 7px;
+}
+
+.result-head button,
+.history-head button {
+  border-color: #d9e0e7;
+  background: #fff;
+  color: #101820;
+}
+
+.result-tabs {
+  display: flex;
+  gap: 10px;
+  padding: 9px 12px 0;
+  border-bottom: 1px solid #d9e0e7;
+}
+
+.result-tabs button {
+  height: 28px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #667085;
+  font-weight: 850;
+  padding: 0 2px 7px;
+}
+
+.result-tabs button.active {
+  color: #101820;
+  border-bottom-color: #16a085;
+}
+
+#resultText {
+  max-height: 150px;
+  margin: 0;
+  padding: 12px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: 12px/1.65 inherit;
+}
+
+.history-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px 0 8px;
+  color: #344054;
+  font-weight: 850;
+}
+
+.search {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.search input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #d9e0e7;
+  border-radius: 8px;
+  background: #fff;
+  color: #101820;
+  outline: none;
+  padding: 0 11px;
+}
+
+.search input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, .12);
+}
+
+.history {
+  display: grid;
+  gap: 8px;
+  max-height: 252px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.item {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #d9e0e7;
+  border-radius: 8px;
+  background: #fff;
+  min-height: 76px;
+  padding: 10px 11px;
+  transition: transform .14s ease, border-color .14s ease, background .14s ease, box-shadow .14s ease;
+}
+
+.item:hover {
+  border-color: #16a085;
+  background: #fbfffe;
+}
+
+.item:active {
+  transform: scale(.99);
+}
+
+.item.active {
+  border-color: #16a085;
+  box-shadow: inset 3px 0 0 #16a085;
+  background: #f6fffc;
+}
+
+.item-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #101820;
+  font-weight: 750;
+}
+
+.item-title mark {
+  border-radius: 4px;
+  background: rgba(25, 118, 210, .16);
+  color: #1565c0;
+  font-weight: 850;
+  padding: 0 2px;
+}
+
+.item-meta {
+  margin-top: 4px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.empty {
+  padding: 24px 12px;
+  text-align: center;
+  color: #667085;
+  border: 1px dashed #cfd7df;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .72);
+}
